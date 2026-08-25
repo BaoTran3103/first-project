@@ -1,76 +1,145 @@
-# first-project
+# Git Workflow
 
-Project dùng để thực hành **Git & GitHub**.
+## 🆕 Khi bắt đầu làm việc với một folder/project mới
 
-## 🔄 Quy trình mỗi lần chỉnh sửa code
+Mở Terminal tại folder đó.
 
-Sau khi chỉnh sửa hoặc thêm code:
+### 1. Khởi tạo Git
 
-### 1. Kiểm tra file đã thay đổi
+Nếu folder chưa có Git:
 
-Mở tab **Commit** trong IDE.
-
-Ở mục **Changes**, kiểm tra những file mình vừa sửa.
-
-### 2. Commit
-
-Trong ô **Commit Message**, nhập nội dung mô tả thay đổi.
-
-Ví dụ:
-
-```text
-edit readme
+```bash
+git init
 ```
 
-Sau đó bấm:
+### 2. Cấu hình Git cho project
 
-**Commit**
+Đặt tài khoản Git identity cho **riêng project này**:
 
-### 3. Commit & Push
+```bash
+git config --local user.name "BaoTran3103"
+git config --local user.email "tranngoctran3103@gmail.com"
+```
 
-Nếu muốn vừa commit vừa đẩy code lên GitHub:
+Kiểm tra lại:
 
-**Commit and Push...**
+```bash
+git config --local --list
+```
 
-Sau đó xác nhận **Push**.
+Hoặc kiểm tra riêng:
 
-Hoặc nếu đã bấm **Commit** trước:
+```bash
+git config --local user.name
+git config --local user.email
+```
 
-**Git → Push**
+Kết quả mong muốn:
 
-### 4. Kiểm tra GitHub
-
-Sau khi push thành công, vào repository trên GitHub để kiểm tra code đã được cập nhật.
+```text
+BaoTran3103
+tranngoctran3103@gmail.com
+```
 
 ---
 
-## 📌 Quy trình ngắn gọn
+## 📤 Commit & Push
+
+### 3. Kiểm tra thay đổi
+
+```bash
+git status
+```
+
+### 4. Add code
+
+```bash
+git add .
+```
+
+### 5. Commit
+
+```bash
+git commit -m "initial commit"
+```
+
+Hoặc mô tả thay đổi cụ thể:
+
+```bash
+git commit -m "update readme"
+```
+
+### 6. Đặt branch là `main`
+
+```bash
+git branch -M main
+```
+
+### 7. Kết nối GitHub repository
+
+```bash
+git remote add origin git@github-baotran:BaoTran3103/REPOSITORY_NAME.git
+```
+
+Ví dụ:
+
+```bash
+git remote add origin git@github-baotran:BaoTran3103/first-project.git
+```
+
+### 8. Push lần đầu
+
+```bash
+git push -u origin main
+```
+
+Sau lần push đầu tiên, những lần sau chỉ cần:
+
+```bash
+git add .
+git commit -m "mô tả thay đổi"
+git push
+```
+
+---
+
+# 🔁 Quy trình hằng ngày
+
+Sau khi đã setup project:
 
 ```text
 Sửa code
    ↓
-Commit
+git status
    ↓
-Commit Message
+git add .
    ↓
-Commit and Push
+git commit -m "message"
    ↓
-Push
+git push
    ↓
 GitHub
 ```
 
-## ⚠️ Lưu ý
-
-* **Commit** = lưu một phiên bản thay đổi vào Git ở máy.
-* **Push** = đưa những commit đó từ máy lên GitHub.
-* Nếu chỉ **Commit** mà chưa **Push** thì GitHub chưa được cập nhật.
-* Trước khi push, kiểm tra project đang sử dụng đúng **GitHub account**.
-
 ## 👤 GitHub Account
 
-Project này được cấu hình để sử dụng:
+Project mặc định sử dụng:
 
 ```text
-GitHub: BaoTran3103
+GitHub account: BaoTran3103
+Email: tranngoctran3103@gmail.com
 ```
+
+## ⚠️ Lưu ý
+
+`user.name` và `user.email` xác định **thông tin tác giả của commit**.
+
+SSH remote:
+
+```text
+git@github-baotran:...
+```
+
+xác định **GitHub account được dùng để xác thực khi push**.
+
+Vì vậy, với project sử dụng BaoTran3103, nên cấu hình **cả hai**.
