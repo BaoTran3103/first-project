@@ -1,29 +1,76 @@
 # first-project
 
-Đây là project đầu tiên của mình để làm quen với **Git và GitHub**.
+Project dùng để thực hành **Git & GitHub**.
 
-## 📌 Nội dung
+## 🔄 Quy trình mỗi lần chỉnh sửa code
 
-* Khởi tạo Git repository
-* Tạo commit
-* Làm việc với branch `main`
-* Kết nối project với GitHub
-* Push code từ máy tính lên GitHub
-* Thử nghiệm sử dụng nhiều tài khoản GitHub trên cùng một máy
+Sau khi chỉnh sửa hoặc thêm code:
 
-## 🛠️ Công nghệ
+### 1. Kiểm tra file đã thay đổi
 
-* Git
-* GitHub
+Mở tab **Commit** trong IDE.
 
-## 🚀 Mục tiêu
+Ở mục **Changes**, kiểm tra những file mình vừa sửa.
 
-Thực hành quy trình cơ bản:
+### 2. Commit
+
+Trong ô **Commit Message**, nhập nội dung mô tả thay đổi.
+
+Ví dụ:
 
 ```text
-Code → Add → Commit → Push → GitHub
+edit readme
 ```
 
-## 👨‍💻 Author
+Sau đó bấm:
 
-**BaoTran3103**
+**Commit**
+
+### 3. Commit & Push
+
+Nếu muốn vừa commit vừa đẩy code lên GitHub:
+
+**Commit and Push...**
+
+Sau đó xác nhận **Push**.
+
+Hoặc nếu đã bấm **Commit** trước:
+
+**Git → Push**
+
+### 4. Kiểm tra GitHub
+
+Sau khi push thành công, vào repository trên GitHub để kiểm tra code đã được cập nhật.
+
+---
+
+## 📌 Quy trình ngắn gọn
+
+```text
+Sửa code
+   ↓
+Commit
+   ↓
+Commit Message
+   ↓
+Commit and Push
+   ↓
+Push
+   ↓
+GitHub
+```
+
+## ⚠️ Lưu ý
+
+* **Commit** = lưu một phiên bản thay đổi vào Git ở máy.
+* **Push** = đưa những commit đó từ máy lên GitHub.
+* Nếu chỉ **Commit** mà chưa **Push** thì GitHub chưa được cập nhật.
+* Trước khi push, kiểm tra project đang sử dụng đúng **GitHub account**.
+
+## 👤 GitHub Account
+
+Project này được cấu hình để sử dụng:
+
+```text
+GitHub: BaoTran3103
+```
